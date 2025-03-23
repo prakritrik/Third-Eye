@@ -13,8 +13,10 @@ import {
   Fab 
 } from '@mui/material';
 import { Settings as SettingsIcon, Radar, WifiProtectedSetup } from '@mui/icons-material';
+import { Analytics } from '@vercel/analytics/react';
 import CameraFeed from './components/CameraFeed';
 import Settings from './components/Settings';
+import LocationMap from './components/LocationMap';
 
 // Create a custom theme with enhanced visual elements
 const theme = createTheme({
@@ -268,6 +270,8 @@ function App() {
             setVoiceEnabled={setVoiceEnabled}
           />
         </Drawer>
+
+        <Analytics />
       </Box>
     </ThemeProvider>
   );
